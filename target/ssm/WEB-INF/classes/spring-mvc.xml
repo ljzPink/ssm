@@ -12,7 +12,7 @@
 
     <!-- 注册MVC注解驱动 -->
     <mvc:annotation-driven />
-
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/" />  
     <!-- 静态资源可访问的设置方式 -->
     <mvc:default-servlet-handler />
 

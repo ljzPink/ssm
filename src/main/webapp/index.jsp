@@ -3,9 +3,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>主页</title>
+<title>忠哥哥</title>
+ <link rel="stylesheet" href="static/assets/scss/index/index.css">
 </head>
 <body>
-<h3>欢迎，${user.username }</h3>
+<%-- <h3>欢迎，${user.username }</h3> --%>
+<div class = "bg">
+
+<img src="static/assets/img/index/bg5.jpg" >
+</div>
+<a onclick="window.open('./static/yanshi/1/index.html')"> 演示1</a>
+<a onclick="window.open('./static/yanshi/2/index.html')"> 演示2</a>
+
 </body>
 </html>

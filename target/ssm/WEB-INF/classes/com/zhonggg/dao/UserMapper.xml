@@ -3,6 +3,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhonggg.dao.UserDao">
     <select id="findByUsername" parameterType="string" resultType="User">
-        SELECT * FROM r_access_users WHERE login_name=#{username}
+        SELECT * FROM person WHERE username=#{username}
     </select>
 </mapper>
