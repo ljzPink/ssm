@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+  body{
+              background-size:100% 100%;
+        }
+.content > div{
+            height: auto;
+            line-height: auto;
+            text-align: center;
+            color: #333;
+            background: #cccccc;
+            margin-top: 10px;
+        }
+        
+.home {
+    background: url(../../img//header-bg1.jpg) no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height:650px;
+	position: relative;
+}
+ .bg {
+background:url(../../img/indexviewbg1.jpeg) no-repeat center;
+background-size:cover;
+}
+.logo {
+    float: left;
+}
+.logo span {
+    border: 7px solid #00a78e;
+    padding: 0px 14px;
+    font-size: 1.2em;
+    color: #fff;
+}
+.top-header {
+    padding: 2em 0;
+}
+.banner-info {
+    background: rgba(23, 20, 20, 0.58);
+    margin-top: 4em;
+}
+.header-right {
+    padding: 3em;
+}

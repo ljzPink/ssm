@@ -13,13 +13,16 @@ package com.zhonggg.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.zhonggg.dao.UserDao;
+import com.zhonggg.dao.user.UserDao;
 import com.zhonggg.domain.User;
+import com.zhonggg.service.UserService;
 
 
 /**
@@ -32,26 +35,26 @@ import com.zhonggg.domain.User;
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
-	@Resource
-    private UserDao userDao;
+	@Autowired
+    private UserService userService;
 
-    @RequestMapping("/view")
+    @RequestMapping("/")
     public String view() {
-        return "main/login";
+        return "user/index";
     }
 
     @RequestMapping("/indexview")
     public String index() {
-        return "main/index";
+        return "user/indexview";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ModelAndView login(User model, HttpSession session) {
-        User user = userDao.findByUsername(model.getUsername());
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login( User model, HttpSession session) {
+        User user = userService.findByUsername("ljz");
 
-        session.setAttribute("user", user);
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("index");
-        return mav;
+        // session.setAttribute("username", user);
+        //ModelAndView mav = new ModelAndView();
+        // mav.setViewName("index")";
+        return "index";
     }
 }

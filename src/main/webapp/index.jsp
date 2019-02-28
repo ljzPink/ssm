@@ -8,12 +8,13 @@
 </head>
 <body>
 <%-- <h3>欢迎，${user.username }</h3> --%>
-<div class = "bg">
+<!-- <div class = "bg">
 
 <img src="static/assets/img/index/bg5.jpg" >
-</div>
+</div> -->
 <a onclick="window.open('./static/yanshi/1/index.html')"> 演示1</a>
 <a onclick="window.open('./static/yanshi/2/index.html')"> 演示2</a>
+<a onclick="window.open('./static/yanshi/3/index.html')"> 像素文字</a>
 
 </body>
 </html>
